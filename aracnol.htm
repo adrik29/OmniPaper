@@ -1,0 +1,1015 @@
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <style type="text/css">
+    html {
+      overflow-y: hidden;
+      overflow-x: hidden;
+      font-family: 'Roboto Slab', serif;
+    }
+
+    td {
+      color: #e4e1d5;
+    }
+
+    a {
+      color: #8fa9d3;
+    }
+
+    .show_scroll{
+      overflow-y: visible;
+    }
+
+    html, body {
+      background-color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bgi {
+      width: auto;
+      height: auto;
+    }
+
+    .title_text {
+      visibility: hidden;
+      position: absolute;
+      z-index: 1;
+      margin: 0 auto;
+      padding: 1vw;
+      left: 0;
+      right: 0;
+      top: 20vh;
+      text-align: center;
+      width: 75%;
+      background: rgba(51, 51, 51, 0.4);
+      color: #fff;
+      font-size: 2.4vw;
+      text-shadow: 3px 3px #000;
+    }
+
+    .text {
+      visibility: hidden;
+      position: absolute;
+      z-index: 1;
+      margin: 0 auto;
+      padding: 1vw;
+      left: 0;
+      right: 0;
+      top: 6%;
+      text-align: justify;
+      background: rgba(51, 51, 51, 0.8);
+      color: #fff;
+      font-size: 1.4vw;
+    }
+
+    .img_charinus {
+      content: url("Charinus imperialis 02.JPG");
+      width: 95vw;
+    }
+
+    .img_harvex1{
+      content: url("har1.jpg");
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .img_harvex2 {
+      content: url("har2.bmp");
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .img_harvex3 {
+      content: url("har3.bmp");
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .img_harvex4 {
+      content: url("har4.jpg");
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .harvex_modes {
+      visibility: hidden;
+      width: 100vw;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 7vh;
+    }
+
+    .text_modes {
+      width: 80%;
+      z-index: 1;
+      padding-left: 10vw;
+      color: #fff;
+      font-size: 1.4vw;
+    }
+
+    .alumni_content {
+      visibility: hidden;
+      width: 92vw;
+      position: absolute;
+      z-index: 1;
+      left: 3vw;
+      right: 0;
+      top: 7vh;
+      color: #e4e1d5;
+    }
+
+    .unpublications {
+      visibility: hidden;
+      width: 92vw;
+      position: absolute;
+      z-index: 1;
+      left: 3vw;
+      right: 0;
+      top: 7vh;
+      color: #e4e1d5;
+      font-size: 1.2vw;
+    }
+
+    .year_header_unpub {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.9vw;
+    }
+
+    .navbar_border{
+      width: 100%;
+      height: 6px;
+      background-color: #a9a97f;
+      margin-top: 6.5vh;
+    }
+
+    .navbar {
+      position: fixed;
+      z-index: 22;
+      background-color: #333;
+      width: 96vw;
+    }
+
+      .navbar a {
+        float: left;
+        font-size: 1.2vw;
+        padding: 0.8vw;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+      .dropdown .btn_dropdown {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.2vw;
+        padding: 0.8vw;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover, .dropdown:hover .btn_dropdown, .btn_dropdown:focus {
+        background-color: #bda17b;
+      }
+
+    .dropdown-content {
+      visibility: hidden;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+
+    .show {
+      visibility: visible;
+    }
+
+    .hide{
+      visibility: hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" id="btn_home" onclick="Toggle_Home(); return false;">Home</a>
+    <a href="#" id="btn_news">News</a>
+    <div class="dropdown">
+      <button class="btn_dropdown" id="btn_aracnolab_dropdown" onclick="Toggle_AracnoLab()">
+        ArachnoLab
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="https://www.flickr.com/photos/adrik29/sets" target="_blank">Flickr Adrik</a>
+        <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/aracgall3.htm" target="_blank">Expeditions</a>
+        <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/cursoaracno.htm" target="_blank">MNRJ Courses</a>
+        <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/typesMN.htm" target="_blank">Collections</a>
+        <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/projetos.html" target="_blank">Projects</a>
+        <a href="#" id="btn_alumni" onclick="Toggle_Alumni(); return false;">Alumni</a>
+        <a href="#" id="btn_unpublications" onclick="Toggle_Unpublications(); return false;">Un-publications</a>
+      </div>
+    </div>
+    <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/adrikpapers.htm" target="_blank">Adrik's Page</a>
+    <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/OmniPaper/Novo%20site/omnipaper.html" id="btn_omnipaper" target="_blank">OmniPaper</a>
+    <div class="dropdown">
+      <button class="btn_dropdown" id="btn_harvex_dropdown" onclick="Toggle_Harvex();return false;">
+        HarvEx
+      </button>
+      <div class="dropdown-content" id="harvex_dropdown">
+        <a href="#" id="btn_harvex_intro" onclick="Toggle_Harvex_Intro(); return false;">
+          Intro
+        </a>
+        <a href="#" id="btn_harvex_countries" onclick="Toggle_Harvex_Countries(); return false;">
+          Countries of the World
+        </a>
+        <a href="#" id="btn_harvex_modes" onclick="Toggle_Harvex_Modes(); return false;">
+          Modes
+        </a>
+        <a href="#">
+          Download
+        </a>
+      </div>
+    </div>
+    <a href="https://opiliones.fandom.com/wiki/Opiliones_Wiki" id="btn_wiki" target="_blank">Opiliones Wiki</a>
+    <a href="https://sfg.taxonworks.org/tasks/nomenclature/browse?id=321566&taxon_name_id=321566" id="btn_taxon" target="_blank">Opilio-catalogue</a>
+    <a href="#" id="btn_contacts" onclick="Toggle_Contacts();return false;">
+      Contact
+    </a>
+    <div class="navbar_border"></div>
+  </div>
+  <div id="id_bgi_div" class="bgi">
+      <img class="img_charinus" id="id_charinus" />
+      <div class="title_text" id="txt_home">
+        <p>
+          ArachnoLab: home of the Arachnology Section of Museu Nacional
+          / Universidade Federal do Rio de Janeiro<br />
+          <script type="text/javascript" src="http://jd.revolvermaps.com/2/2.js?i=3ybt5jqielh&amp;m=5&amp;s=130&amp;c=00ff6c&amp;t=1" async></script>
+        </p>
+        <p style="font-size: 1.2vw;">
+          How to cite this page: Kury, A.B. (1999 onwards) Aracnolab - Aracnologia MNRJ. Museu Nacional/UFRJ website. Online at: http://www.museunacional.ufrj.br/mndi/Aracnologia/aracnol.htm
+        </p>
+      </div>
+
+      <p class="text" id="txt_contacts" style="width:50%;">
+          Correspondence address: Aracnologia (Invertebrates),<br /><br />
+          Museu Nacional, Quinta da Boa Vista s/n,<br /><br />
+          São Cristóvão, 20.940-040, Rio de Janeiro - RJ - BRAZIL.
+      </p>
+      <p class="text" id="txt_harvex_intro" style="width:92%;">
+          HarvEx is a simple computer program which allows users to explore the database of Opiliones
+          derived from Kury’s catalogue (WCO) through diverse queries.<br />
+          With HarvEx it is possible for example to know how many valid endemic species were
+          described by Roewer from 1912 to 1914 from what is now Serbia, and how these species are
+          distributed in genera, subfamilies, etc.<br />
+          or...<br />
+          to know in which countries the family Cosmetidae is distributed and how large a slice of its
+          diversity is taken by that country.<br />
+          or....<br />
+          to produce instantly a checklist of all Opiliones species from Mauritania....<br />
+          Of course, for the situation in the first example above to be possible it takes painstaking
+          research.<br />
+          Imagine someone recording a species from locality “Rskvrstzenica” in Yugoslavia. It takes some
+          digging to discover that the current name is Rzcsvrstzenica and it is located in Serbia.<br />
+          And if I don’t do one by one this I may miss the record of that species from that country.<br />
+          But wait.... actually this locality is currently in southern Serbia which is now a different country,
+          Kosovo... but........ with only limited recognition by the UN members... Hm... then comes the
+          question, should I or shouldn't I discriminate Kosovo in my catalog? and why? And
+          Transnistria? Should I recognize every self declared country? Where should I draw the line?<br />
+          Remember that not even China has 100% recognition...<br />
+          This is a matter for another note, but I raised the question here just to illustrate that even not
+          refining the distribution of species beyond "country" level can be a huge task. Older literature
+          has incredible variety of regional denominations and can be labyrinthine.
+      </p>
+      <p class="text" id="txt_harvex_countries" style="width:80%;">
+          Acceptance of states in the Harvestmen Explorer (HarvEx) and in the
+          World Catalogue of Opiliones (WCO) - Where should the line be drawn?<br />
+          Disclaimer: the acceptance of 197 sovereign states in these two projects is unrelated to the
+          specific diplomatic position of Brazil, and follows the criteria explained below.<br /><br />
+          1) All 193 member states of the United Nations (UN) are accepted in HarvEx (where they are
+          assigned three-letter codes from ISO 3166-1 alpha-3) and the World Catalog of Opiliones
+          (WCO).<br />
+          Even the following six states with less than 100% recognition enter the list of HarvEx, as
+          detailed in the following remarks:<br />
+          Armenia (ARM) – independent since 1991, is not recognized by one UN member, Pakistan.<br />
+          Cyprus, Republic of (CYP) – independent since 1960, is not recognized by one UN member
+          (Turkey) and one UN non-member (Northern Cyprus).<br />
+          Israel (ISR) – founded in 1948, is not recognized by 31 UN members.<br />
+          North Korea (PRK) – independent since 1948, is not recognized by three UN members: France,
+          Japan, South Korea; and one non-UN member: Taiwan.<br />
+          People's Republic of China (CHN) – The People's Republic of China maintains diplomatic
+          relations with most countries in the world. In 1971, the People's Republic of China replaced the
+          Republic of China, commonly known as "Taiwan"; since the 1970s, as the sole representative of
+          China in the United Nations and as one of the five permanent members of the United Nations
+          Security Council. Not recognized by non-member Taiwan.<br />
+          South Korea (KOR) – independent since 1948, is not recognized by one UN member, North
+          Korea.<br /><br />
+          2) One UN observer state not recognized by at least one UN member state is accepted in
+          HarvEx and WCO:<br />
+          State of Palestine (PSE) – declared in 1988; de jure sovereign state recognized by 137 UN
+          member states, the Holy See, and the Sahrawi Arab Democratic Republic. Not recognized by
+          Israel, USA, Canada, Mexico, Japan, South Korea, Taiwan, Australia, New Zealand, and most of
+          the European Union, among others.<br /><br />
+          3) Three states that are neither UN members nor UN observers but which have expressive
+          recognition are accepted in HarvEx and WCO:<br />
+          Kosovo (there is no ISO 3166-1 alpha-3 code; KOS used here from United Nations Development
+          Programme AND International Olympic Committee code) – declared independence in 2008;
+          currently recognized by 113 UN members; NOT recognized by Serbia, China, Russia, Romania,
+          Slovakia, Greece, Brazil.<br />
+          Taiwan or Republic of China (TWN) – constitutionally formed in 1912; de jure part of the
+          People's Republic of China; currently recognized as a state by 16 UN members and the Holy
+          See.<br />
+          Western Sahara or Sahrawi Arab Democratic Republic (ESH) – declared independence in 1976;
+          currently recognized by 46 UN member states and South Ossetia. 38 other UN member states
+          have recognized the Sahrawi Arab Democratic Republic but subsequently retracted or
+          suspended recognition, pending the outcome of a referendum on self-determination. It does
+          not make difference for Opiliones, because there are no records due to the desertic
+          physiognomy.<br /><br />
+          4) Three states that are neither UN members nor UN observers and have only scarce
+          recognition are NOT accepted in HarvEx and WCO:<br />
+          Abkhazia – declared its independence in 1999; currently recognized by 5 UN member states
+          and three UN non-member states. For the purposes of HarvEx and WCO its territory is included
+          in Georgia.<br />
+          Northern Cyprus or Turkish Republic of Northern Cyprus – declared its independence in 1983;
+          recognized only by Turkey. For the purposes of HarvEx and WCO its territory is included in
+          Cyprus.<br />
+          South Ossetia – declared its independence in 1991; currently recognized by 5 UN member
+          states and four UN non-member states. For the purposes of HarvEx and WCO its territory is
+          included in Georgia.<br /><br />
+          5) States recognized only by other non-UN member states are NOT accepted in HarvEx and
+          WCO:<br />
+          Republic of Artsakh or Nagorno-Karabakh Republic – declared its independence in 1991. It is
+          recognized by three UN non-members: Abkhazia, South Ossetia and Transnistria. For the
+          purposes of HarvEx and WCO its territory is included in Azerbaijan.<br />
+          Transnistria or Pridnestrovian Moldavian Republic – declared its independence in 1990. It is
+          recognized by three UN non-members: Abkhazia, Republic of Artsakh (Nagorno-Karabakh) and
+          South Ossetia. For the purposes of HarvEx and WCO its territory is included in Moldova.
+      </p>
+      <div class="harvex_modes" id="id_harvex_modes">
+          <img class="img_harvex1" id="har1" />
+          <p class="text_modes" id="har10">
+              The user starts by choosing among three modes, depending on the kind of query he has.<br />
+              The initial screen has three mode buttons: hand, leaf, globe, which respectively lead the user to:<br />
+              Diversity by area/authors Mode,<br />
+              Taxon distribution Mode<br />
+              and<br />
+              Checklist Mode.<br />
+          </p>
+          <img class="img_harvex2" id="har2" />
+          <p class="text_modes" id="har20">
+              Hand Mode<br />
+              Diversity by area/authors Mode (Hand) can answer many different kinds of query, for
+              example:<br />
+              How many species/ genera/etc. occur in a given realm/continent/country? Can I have a visual
+              representation of the predominance of a taxon in certain areas? filtered by more diverse
+              genera to decrease the noise generated by the countless monotypic Roewerian genera? What
+              is the composition of the opilionofauna of such and such place?<br />
+              Here, in the Figure 1 we answer the questions:<br />
+              What is the composition of opilionofauna of the Afrotropics?<br />
+              Can I pick only the thickest slices of the pie? Yes, by using the slider to filter only the most
+              diverse countries.<br />
+              Now we know that the 6 most diverse families in the Afrotropics sum 695 species, and that
+              Assamiidae is the richest.
+          </p>
+          <img class="img_harvex3" id="har3" />
+          <p class="text_modes" id="har30">
+              Hand Mode - the Roewerian Effect<br />
+              The high percentage of monotypic genera in Opiliones is a consequence of the systematic
+              methods of the German author Carl-Friedrich Roewer, and it causes a disproportionate
+              number of subdivisions which conceal any useful pattern. To deal with this effect, besides the
+              slider which allows a cutoff line, the genera below a certain threshold are grouped into the
+              "others" category in the pie chart and also nor depicted in the list to the right side. Otherwise
+              the amount of super small slice of the pie would render it unreadable. This effect of course is
+              maximized when dealing with very large areas and subdivided be genera instead of families for
+              example.<br />
+              The example below shows the Neotropical Realm without any filters and only with the genera
+              which have more than a certain number of species individualized.
+          </p>
+          <img class="img_harvex4" id="har4" />
+          <p class="text_modes" id="har40">
+              Leaf Mode<br />
+              With HarvEx, students will be
+              able to see the composition of families, subfamilies or genera by either realm or country,
+              including filter for period of time and diversity of each genus.<br />
+              Here in the example we may see the distributional range of the small family Kimulidae in six
+              Neotropical countries.
+          </p>
+      </div>
+      <div id="id_alumni" class="alumni_content">
+          <hr>
+          <table width="100%" border="1">
+              <tbody>
+                  <tr>
+                      <td width="26%" align="center" bordercolor="#660000">NAME OF PERSON</td>
+                      <td colspan="3" align="center" bordercolor="#660000">LINKS</td>
+                      <td width="46%" align="center" bordercolor="#660000">CATEGORY</td>
+                      <td width="16%" align="center" bordercolor="#660000">PERIOD</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td width="4%" align="center">&nbsp;</td>
+                      <td width="4%" align="center">&nbsp;</td>
+                      <td width="4%" align="center">&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>Abel Pérez González</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/3506071737539934">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Abel_Perez_Gonzalez/contributions">RG</a></td>
+                      <td align="center"><a href="abelpapers.htm">PP</a></td>
+                      <td>Ph.D. student/ Visiting Professor</td>
+                      <td>2001-2008</td>
+                  </tr>
+                  <tr>
+                      <td>Adriano Brilhante Kury</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/8917689589103592">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Adriano_Kury/contributions">RG</a></td>
+                      <td align="center"><a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/adrikhome.htm">PP</a></td>
+                      <td>Professor / Supervisor / Curator</td>
+                      <td>1996-now</td>
+                  </tr>
+                  <tr>
+                      <td>Alessandro Ponce de     Leão Giupponi</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/6936831298115248">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Alessandro_Giupponi/contributions">RG</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee  / M.Sc. student / Ph.D. student / Visiting professor</td>
+                      <td>1998-2013</td>
+                  </tr>
+                  <tr>
+                      <td>Aline Pires de Melo</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/0203655501359109">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate / M.Sc. student</td>
+                      <td>1999-2003</td>
+                  </tr>
+                  <tr>
+                      <td>Amanda Cruz Mendes</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/4275832322525455">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Amanda_Mendes/contributions">RG</a></td>
+                      <td align="center"><a href="Mendes.htm">PP</a></td>
+                      <td>Trainee  / M.Sc. student / Ph.D. student / Post-Doc</td>
+                      <td>2001-2014</td>
+                  </tr>
+                  <tr>
+                      <td>Amazonas Chagas Júnior</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/3601940557761730">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Amazonas_Chagas-Jr2/contributions">RG</a></td>
+                      <td align="center"><a href="https://www.facebook.com/amazonas.chagasjunior">PP</a></td>
+                      <td>M.Sc. student / Ph.D. student/ Visiting Professor</td>
+                      <td>2002-2010</td>
+                  </tr>
+                  <tr>
+                      <td>Ana Lúcia Miranda     Tourinho</td>
+                      <td align="center"> <a href="http://lattes.cnpq.br/6896465684968144">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Ana_Lucia_Tourinho2/contributions">RG</a></td>
+                      <td align="center"><a href="https://www.facebook.com/ana.tourinho">PP</a></td>
+                      <td>Trainee - undergraduate / M.Sc. student/ external collaborator</td>
+                      <td>1998-2009</td>
+                  </tr>
+                  <tr>
+                      <td>André Luís     Costa Nogueira</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>1998-1999</td>
+                  </tr>
+
+                  <tr>
+                      <td>Andrés Garcia Rincón</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/3912901887561295">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Andres_Garcia32">RG</a></td>
+                      <td align="center"><a href="https://www.facebook.com/agarciarinc">PP</a></td>
+                      <td>M.Sc. student</td>
+                      <td>2014-now</td>
+                  </tr>
+                  <tr>
+                      <td>Carla Martinho de Lima Barros</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/5374217772623741">LA </a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Curatorial assistant</td>
+                      <td>2011-now</td>
+                  </tr>
+                  <tr>
+                      <td>Cláudio Pires     Ferreira</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/3078851586760046">LA </a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center"><a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/papers%20ferreira.htm">OP</a></td>
+                      <td>M.Sc. student / Ph.D. student</td>
+                      <td>2003-2012</td>
+                  </tr>
+                  <tr>
+                      <td>Cristiano Sampaio Costa</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/8046099873927529">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate / M.Sc. student</td>
+                      <td>2005-2011</td>
+                  </tr>
+                  <tr>
+                      <td>Débora Araújo</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center"><a href="https://www.facebook.com/debora.cristina.5015">PP</a></td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2002-2005</td>
+                  </tr>
+                  <tr>
+                      <td>Deives Frota Almeida</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/0285839198919097">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2015-now</td>
+                  </tr>
+                  <tr>
+                      <td>Denis Rafael Pedroso <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/papers%20ferreira.htm"></a></td>
+                      <td align="center"><a href="http://lattes.cnpq.br/5489321194645432">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Denis_Pedroso/contributions">RG</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate/ external collaborator</td>
+                      <td>2002-now</td>
+                  </tr>
+                  <tr>
+                      <td>Eduardo Gomes de Vasconcelos</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/6592997600623686">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>M.Sc. student / Ph.D. student</td>
+                      <td>2001-2009</td>
+                  </tr>
+                  <tr>
+                      <td>Eduardo Henrique     Wienskoski Filho</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/1303870042387336">LA</a></td>
+                      <td align="center"><a href="https://www.facebook.com/eduardo.wiensk">PP</a></td>
+                      <td align="center"><a href="http://wienskoski.weebly.com/">PP</a></td>
+                      <td>Ph.D. student</td>
+                      <td>2004-2009</td>
+                  </tr>
+                  <tr>
+                      <td>Gustavo Silva de Miranda</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/3520462351528099">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Gustavo_Miranda4/contributions">RG</a></td>
+                      <td align="center"><a href="https://www.facebook.com/smiranda.gustavo">PP</a></td>
+                      <td>Trainee - undergraduate / M.Sc. student</td>
+                      <td>2010-2013</td>
+                  </tr>
+                  <tr>
+                      <td>Ian Souza Kury</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/9301580061336311">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>External collaborator</td>
+                      <td>2008-2012</td>
+                  </tr>
+                  <tr>
+                      <td>Juliana Santos Machado</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/1600636185736413">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate (PIBIC)</td>
+                      <td>2010-2011</td>
+                  </tr>
+                  <tr>
+                      <td>Lillán Cendales Rojas</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center"><a href="https://www.facebook.com/lillancendales">PP</a></td>
+                      <td>Capacitation foreign trainee</td>
+                      <td>2007</td>
+                  </tr>
+                  <tr>
+                      <td>Ludson&nbsp;Neves de Ázara</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/4345253755018426">LA</a></td>
+                      <td align="center">RG</td>
+                      <td align="center"><a href="https://www.facebook.com/ludson.azara">PP</a></td>
+                      <td>Ph.D. student</td>
+                      <td>2016-</td>
+                  </tr>
+                  <tr>
+                      <td>Luiz Antonio dos Santos Vaz</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Eventual programmer</td>
+                      <td>2005-2008</td>
+                  </tr>
+                  <tr>
+                      <td>Luiz Fernando Duarte     de Figueiredo</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>1999-2000</td>
+                  </tr>
+                  <tr>
+                      <td>Marcelo da Silva Baptista</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/0195853031332261">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>1996-2000</td>
+                  </tr>
+
+                  <tr>
+                      <td>Marcelo Ramígio     dos Prazeres</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2002-2003</td>
+                  </tr>
+                  <tr>
+                      <td>Mariana Lucas</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2008-2009</td>
+                  </tr>
+                  <tr>
+                      <td>Marianna Silva Miranda</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/5606147654320474">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Subtrainee - graduate</td>
+                      <td>2009-2010</td>
+                  </tr>
+                  <tr>
+                      <td>Maurício Gonçalves     Vogt</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>1996-1999</td>
+                  </tr>
+                  <tr>
+                      <td>Miguel-Angel Medrano</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/5769333897038223">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Miguel_Medrano">RG</a></td>
+                      <td align="center"><a href="https://www.facebook.com/miguelangel.medrano.395">PP</a></td>
+                      <td>M.Sc. student / Ph.D. student</td>
+                      <td>2014-now</td>
+                  </tr>
+                  <tr>
+                      <td>Monique Lisboa de Campos</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/7943454300811760">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Subtrainee - undergraduate</td>
+                      <td>2007-2008</td>
+                  </tr>
+                  <tr>
+                      <td>Osvaldo Villarreal Manzanilla</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/7656958748316667">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Osvaldo_Villarreal_Manzanilla/contributions">RG</a></td>
+                      <td align="center"><a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/villarreal.htm">OP</a></td>
+                      <td>Capacitation foreign trainee / external collaborator / Ph.D. student</td>
+                      <td>2004, 2007, 2012-2016</td>
+                  </tr>
+                  <tr>
+                      <td><span email="bio_paulinha@hotmail.com">Paula Cardoso Netto</span></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2006</td>
+                  </tr>
+
+                  <tr>
+                      <td>Rafael Carvalho</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/9908450982090449">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center"><a href="https://www.facebook.com/rafael.carvalho.33633">PP</a></td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2012-now</td>
+                  </tr>
+                  <tr>
+                      <td>Renner Luiz Cerqueira Baptista</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/7172159861727801">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Visiting Professor/external collaborator</td>
+                      <td>2001-2005</td>
+                  </tr>
+                  <tr>
+                      <td>Rogério Gomes Rodrigues</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>1999-2000</td>
+                  </tr>
+                  <tr>
+                      <td>Santiago Belluco Rompani</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2000-2001</td>
+                  </tr>
+                  <tr>
+                      <td>Thais de Almeida Rossini</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/9054139876551249">LA</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate</td>
+                      <td>2008-2010</td>
+                  </tr>
+
+                  <tr>
+                      <td>Thiago da Silva Moreira</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/2185496698608804">LA</a></td>
+                      <td align="center"><a href="https://www.researchgate.net/profile/Thiago_Da_Silva_Moreira2/contributions">RG</a></td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate / M.Sc. student</td>
+                      <td>2005-2010</td>
+                  </tr>
+                  <tr>
+                      <td>Tiago Nascimento Bernabé</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/4727753209235930">LA</a></td>
+                      <td align="center">RG</td>
+                      <td align="center">&nbsp;</td>
+                      <td>Trainee - undergraduate / external collaborator</td>
+                      <td>2005-now</td>
+                  </tr>
+
+                  <tr>
+                      <td>Victor Goyannes Dill Orrico</td>
+                      <td align="center"><a href="http://lattes.cnpq.br/8248113511185358">LA</a></td>
+                      <td align="center"><a href="pdfliteratura/papers orrico.htm">OP</a></td>
+                      <td align="center">PP</td>
+                      <td>External collaborator</td>
+                      <td>2006-2012</td>
+                  </tr>
+              </tbody>
+          </table>
+          <p align="left">&nbsp;</p>
+      </div>
+      <div id="id_unpublications" class="unpublications">
+          <p class="year_header_unpub">
+              2010-2020
+          </p>
+          <p>
+              Ph.D. Rafael Nascimento de Carvalho. (2022?).
+              Título: Revisão taxonômica e análise cladística de Discocyrtus Holmberg, 1878 (Arachnida, Opiliones, Gonyleptidae).
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              Período: 2018- em andamento.<br /><br />
+
+              Ph.D. Andrés Felipe García Rincón. Título: Revisão taxonômica e análise filogenética de Leiosteninae
+              (Arachnida, Opiliones, Agoristenidae).
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              Período: 2016- em andamento. <br /><br />
+
+              Ph.D. Miguel Angel Medrano Leal (2020)
+              Título: Revisão taxonômica e análise cladística de Discosomaticinae Roewer, 1923 (Arachnida, Opiliones, Laniatores, Cosmetidae).
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              Período: 2016- em andamento.<br /><br />
+
+              Ph.D. Ludson Neves de Ázara. 2020.
+              Título: Revisão taxonômica e análise cladística de Acanthogonyleptes Mello-Leitão, 1922 (Arachnida: Opiliones: Laniatores).
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              Período: 2016-2020.<br /><br />
+
+              M.Sc. Rafael Nascimento de Carvalho. 2018.
+              Título: Teste do monofiletismo do gênero Discocyrtus Holmberg, 1878 (Arachnida, Opiliones, Gonyleptidae, Pachylinae).
+              Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional, Universidade Federal do Rio de Janeiro.
+              Período: 2016-2018.<br /><br />
+
+              M.Sc. Miguel Angel Medrano Leal. 2016.
+              Título: Taxonomic review of the Andean genus Eulibitia Roewer, 1912 (Arachnida, Opiliones, Cosmetidae).
+              Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional, Universidade Federal do Rio de Janeiro.
+              Período: 2014-2016.<br /><br />
+
+              M.Sc. Andrés Felipe García Rincón. 2016. Título: Revisão sistemática do gênero Rhaucus Simon 1879 (Arachnida, Opiliones, Cosmetidae).
+              Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional, Universidade Federal do Rio de Janeiro.
+              Período: 2014-2016.<br /><br />
+
+              Ph.D. Osvaldo Villarreal-Manzanilla. 2016.
+              Título: Teste de monofiletismo da família Cranaidae e avaliação do status sistemático dos táxons supragenéricos da família (Arachnida, Opiliones, Laniatores).
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              Período: 2012-2016.<br /><br />
+          </p>
+          <p class="year_header_unpub">
+              2008-2009
+          </p>
+          <p>
+              Ph.D. Amazonas Chagas Júnior. 2008. Revisão sistemática de Scolopocryptopinae da África,
+              Região Indo-Malaia e Ilhas do Pacífico (Chilopoda, Scolopendromorpha, Scolopocryptopidae).
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              March 2004 - January 2008.<br /><br />
+
+              Ph.D. Amanda Cruz Mendes. 2009. "Avaliação do status sistemático dos táxons supragenéricos de Insidiatores Loman, 1902 (Arachnida, Opiliones, Laniatores)."
+              Tese de Doutorado (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro, com período sanduíche em Western Australian Museum (Orientador: Mark S. Harvey).
+              2005 – 2009<br /><br />
+
+              Ph. D. Alessandro Ponce de Leão Giupponi. 2008. Revisão e Análise Cladística de Charinidae (Arachnida, Amblypygi). Museu Nacional.
+              August 2004 – December 2008.<br /><br />M.Sc. Denis Rafael Pedroso -
+              Revisão do gênero Trechona (Aranea, Dipluridae). xxx [co-supervision xxx].
+              August 2006 - [em andamento]<br /><br />Ph. D. Eduardo Henrique Wienskoski Filho.
+              Revisão taxonômica dos Theridiosomatidae Neotropicais (Arachnida, Araneae). Museu Nacional.
+              March 2005 - [em andamento]<br /><br />
+
+              Ph. D. Eduardo Gomes de Vasconcelos. 2009. Título: Análise Filogenética de Gonyleptinae (Arachnida, Opiliones, Gonyleptidae).
+              Tese (Ciências Biológicas (Zoologia)) - Universidade Federal do Rio de Janeiro.
+              Museu Nacional. 2006 - 2009.<br /><br />M.Sc. Thiago da Silva Moreira.
+              Revisão Taxonômica do gênero Epicadus Simon, 1895 (Arachnida, Araneae, Thomisidae).
+              Museu Nacional. March 2006 - October 2008.
+          </p>
+          <p class="year_header_unpub">
+              2006-2007
+          </p>
+          <p>
+              Ph.D. Abel Pérez González. 2006. Revisão sistemática e análise filogenética de Stygnommatidae
+              (Arachnida, Opiliones). Museu Nacional. September 2001 - December 2006,
+              Data da defesa: 18 Dez 2006.<br /><br />Ph. D. Ana Lúcia Miranda Tourinho.
+              Padrões de distribuição e fatores condicionantes da riqueza de opiliões na várzea do rio Amazonas –
+              Brasil. (Programa de Pós-Graduação em Ecologia) – Instituto Nacional de Pesquisas da Amazônia,
+              INPA [co-supervision Dr. Eduardo Venticinque]. September 2004 - 2007.<br /><br />
+              B.Sc. Thiago da Silva Moreira. Levantamento da Araneofauna (Arachnida: Araneae) do
+              Parque Nacional da Tijuca (Rio de Janeiro Brasil). Curso (Ciências Biológicas Zoologia) -
+              Universidade Federal do Rio de Janeiro (IB-UFRJ). 2006.<br /><br />M. Sc. Cláudio Pires Ferreira.
+              2006. Revisão sistemática do gênero Metavononoides Roewer (Arachnida, Opiliones, Cosmetidae).
+              Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional, Universidade Federal do
+              Rio de Janeiro. March 2004 – 7 July 2006.<br /><br />B.Sc. Tiago Nascimento Bernabé. 2007.
+              Levantamento dos Opiliões (Arachnida: Opiliones) da Reserva Biológica Augusto Ruschi,
+              Santa Teresa - ES. Monografia de Curso (Ciências Biológicas). Escola Superior
+              São Francisco de Assis (ESFA). Defendida em 31 Jan 2007.
+          </p>
+          <p class="year_header_unpub">
+              2004-2005
+          </p>
+          <p>
+              M.Sc. Alessandro Ponce de Leão Giupponi. 2004. Revisão sistemática do gênero Heterophrynus
+              (Arachnida, Amblypygi). Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional,
+              Universidade Federal do Rio de Janeiro. March 2001 - March 2004.<br /><br />M.Sc.
+              Amanda Cruz Mendes. 2005. Revisão sistemática e análise filogenética de Heteropachylinae
+              Kury, 1994 (Arachnida, Opiliones, Gonyleptidae). Dissertação de Mestrado (Pós Graduação Em Zoologia)
+              Museu Nacional, Universidade Federal do Rio de Janeiro. August 2003 - July 2005. Data da defesa:
+              15 de julho de 2005.<br /><br />B.Sc. Denis Rafael Pedroso. 2004. Revisão de Trechona
+              (Araneae, Dipluridae). Monografia de Curso (Ciência Biológicas) - Universidade do Grande Rio,
+              UNIGRANRIO. Data da defesa: junho 2004.
+          </p>
+          <p class="year_header_unpub">
+              2002-2003
+          <p />
+          <p>
+              B.Sc. Luis Eduardo Goes e Silva. 2002. Contribuição ao levantamento das aranhas
+              (Arachnida: Araneae) do Estado do Rio de Janeiro. Monografia de Curso (Ciência Biológicas) -
+              Universidade Gama Filho (UGF).<br /><br />M.Sc. Eduardo Gomes Vasconcelos. 2003. Filogenia e
+              Biogeografia do gênero Mischonyx Bertkau, 1880 (Arachnida, Opiliones, Gonyleptidae).
+              Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional, Universidade Federal do
+              Rio de Janeiro. August 2001 - August 2003.<br /><br />B.Sc. Marcelo Ramígio dos Prazeres. 2002.
+              Bibliografia completa e chave para gêneros de Scolopendromorpha (Arthropoda, Chilopoda) da
+              Região Neotropical. Curso (Ciências Biológicas) - Universidade do Grande Rio, UNIGRANRIO.<br /><br />
+              M.Sc. Aline Pires de Melo Nogueira. 2003. Revisão das espécies brasileiras de Thiodina Simon, 1900
+              (Araneae: Salticidae). Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional,
+              Universidade Federal do Rio de Janeiro. August 2000 - August 2003. Defesa em 4 Agosto 2003.
+              <br /><br />M.Sc. Amazonas Chagas Júnior. 2003. Revisão sistemática da subfamília Scolopocryptopinae
+              Pocock, 1895 da Região Neotropical (Chilopoda, Scolopendromorpha, Scolopocryptopidae).
+              Dissertação de Mestrado (Pós Graduação Em Zoologia) Museu Nacional, Universidade Federal do
+              Rio de Janeiro. March 2001 - May 2003. Defesa em 30 Maio 2003. <br /><br />B.Sc.
+              Amanda Cruz Mendes. 2003. Review of Thaumatoleptes (Arachnida, Opiliones, Gonyleptidae).
+              [artigo apresentado sob forma de monografia]. Monografia de Curso (Ciências Biológicas / Zoologia) -
+              Universidade Federal do Rio de Janeiro (IB-UFRJ). Julho de 2003.
+          </p>
+          <p class="year_header_unpub">
+              2000-2001
+          <p />
+          <p>
+              B.Sc. Rogério Gomes Rodrigues. 2000. Chave ilustrada e diagnose para gêneros de Pachylinae do
+              Estado do Rio de Janeiro. Monografia de Curso (Ciências Biológicas). Universidade do Rio de Janeiro
+              (UNI-RIO). Data da defesa: 29 de fevereiro de 2000.<br /><br />B.Sc. Santiago Belluco Rompani.
+              2000. Paragonyleptes versus Collonychium (Arachnida, Opiliones) — A case study of taxonomic
+              innacuracies. The American School of Rio de Janeiro. Data da Graduação: abril de 2000.<br /><br />
+              B.Sc. Alessandro Ponce de Leão Giupponi. 2000. Distribuição e sistemática dos Amblypygi do Brasil
+              (Arachnida, Amblypygi). Monografia de Curso (Ciências Biológicas). Universidade do Grande Rio,
+              UNIGRANRIO. Data da defesa: junho de 2000.<br /><br />M.Sc. Ana Lúcia Miranda Tourinho. 2000.
+              Revisão Sistemática da Subfamília Gagrellinae no Domínio da Mata Atlântica
+              (Opiliones, Palpatores, Sclerosomatidae). Dissertação de Mestrado (Ciências Biológicas (Zoologia))
+              - Museu Nacional, Universidade Federal do Rio de Janeiro. February 1997 - October 2000.
+          </p>
+          <p class="year_header_unpub">
+              1998-1999
+          </p>
+          <p>
+              B.Sc. André Luís Costa Nogueira. 1998. Determinação da coleção
+              escorpionológica do Museu Nacional (Arachnida, Scorpiones). 1998. Monografia de Curso
+              (Ciências Biológicas). Universidade Gama Filho (UGF). Data da defesa: julho de 1998.
+              <br /><br />B.Sc. Marcelo da Silva Baptista. 1999. Taxonomia de Metavononoides Roewer, 1927
+              (Opiliones, Laniatores, Cosmetidae). Monografia de Curso (Ciências Biológicas).
+              Universidade do Rio de Janeiro (UNI-RIO). Data da defesa: 12 de fevereiro de 1999.
+              <br /><br />B.Sc. Maurício Gonçalves Vogt. 1999. Taxonomia do gênero Sphaerobunus
+              (Opiliones, Gonyleptidae). Monografia de Curso (Ciências Biológicas). Universidade do
+              Rio de Janeiro (UNI-RIO). Data da defesa: junho de 1999.<br /><br />B.Sc. Aline Nogueira.
+              1999. Identificação de aranhas coletadas em região de lavoura cacaueira na Bahia pela CEPLAC.
+              Monografia de Curso (Ciências Biológicas). Universidade Gama Filho (UGF). Data da defesa:
+              05 de julho de 1999.<br /><br />B.Sc. Luiz Fernando Duarte de Figueiredo. 1999.
+              As aranhas e a ação de sua peçonha no homem. Monografia de Curso (Ciências Biológicas).
+              Universidade Veiga de Almeida (UVA). Data da defesa: 08 de novembro de 1999.
+          </p>
+      </div>
+  </div>
+
+  <script>
+    var txthome = document.getElementById("txt_home");
+    var dropdown = document.getElementById("myDropdown");
+    var contacts = document.getElementById("txt_contacts");
+    var harvexdropdown = document.getElementById("harvex_dropdown");
+    var harvexintro = document.getElementById("txt_harvex_intro");
+    var harvexcountries = document.getElementById("txt_harvex_countries");
+    var charinus = document.getElementById("id_charinus");
+    var harvexmodes = document.getElementById("id_harvex_modes");
+    var alumni = document.getElementById("id_alumni");
+    var unpublications = document.getElementById("id_unpublications");
+
+    function Toggle_Home() {
+      txthome.classList.toggle("show");
+    }
+    function Toggle_Contacts() {
+      contacts.classList.toggle("show");
+    }
+    function Toggle_AracnoLab() {
+      dropdown.classList.toggle("show");
+    }
+    function Toggle_Harvex() {
+      harvexdropdown.classList.toggle("show");
+    }
+    function Toggle_Harvex_Intro() {
+      harvexintro.classList.toggle("show");
+    }
+    function Toggle_Harvex_Countries() {
+      harvexcountries.classList.toggle("show");
+      document.documentElement.classList.add("show_scroll");
+      charinus.classList.add("hide");
+    }
+    function Toggle_Harvex_Modes() {
+      harvexmodes.classList.add("show");
+      document.documentElement.classList.add("show_scroll");
+      charinus.classList.add("hide");
+    }
+    function Toggle_Alumni() {
+      alumni.classList.add("show");
+      document.documentElement.classList.add("show_scroll");
+      charinus.classList.add("hide");
+    }
+    function Toggle_Unpublications() {
+      unpublications.classList.add("show");
+      document.documentElement.classList.add("show_scroll");
+      charinus.classList.add("hide");
+    }
+    window.onclick = function (e) {
+      var clicked_navbar = e.target.id == "btn_home" ||
+        e.target.id == "btn_news" || e.target.id == "btn_aracnolab_dropdown" ||
+        e.target.id == "btn_omnipaper" || e.target.id == "btn_harvex_dropdown" ||
+        e.target.id == "btn_wiki" || e.target.id == "btn_taxon" || e.target.id == "btn_contacts";
+      if (e.target.id != "btn_aracnolab_dropdown") 
+        dropdown.classList.remove('show');
+      if (clicked_navbar && e.target.id != "btn_home") 
+        txthome.classList.remove('show');
+      if (clicked_navbar && e.target.id != "btn_contacts") 
+        contacts.classList.remove('show');
+      if (e.target.id != "btn_harvex_dropdown") 
+        harvexdropdown.classList.remove('show');
+      if (clicked_navbar) {
+        window.scrollTo(0, 0);
+        harvexintro.classList.remove('show');
+        harvexcountries.classList.remove('show');
+        harvexmodes.classList.remove('show');
+        document.documentElement.classList.remove("show_scroll");
+        charinus.classList.remove("hide");
+        alumni.classList.remove('show');
+        unpublications.classList.remove('show');
+      }
+    }
+  </script>
+</body>
+
+</html>

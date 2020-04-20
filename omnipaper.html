@@ -1,0 +1,671 @@
+﻿<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <style type="text/css">
+        html {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1vw;
+            background-color: #151515;
+            color: #f2f5f5;
+        }
+
+        h1 {
+            font-family: 'Overpass',;
+            font-size: 5vw;
+            text-align: center;
+            color: #91c3ed;
+            line-height: 4vh;
+            margin-top: 4vh;
+        }
+
+        h2 {
+            font-family: 'Lora',;
+            font-size: 2vw;
+            color: #91c3ed;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.6vw;
+            color: #f2f5f5;
+            text-align: center;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            color: #91c3ed;
+        }
+
+        table {
+            width: 100vw;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .show {
+            display: inline !important;
+        }
+
+        .header {
+            width: 100vw;
+        }
+
+        .introduction {
+            width: 78vw;
+            margin-left: 10vw;
+        }
+
+        .intro_text {
+            text-indent: 4vw;
+            font-size: 1.5vw;
+            text-align: justify;
+        }
+
+        .headerimg {
+            width: 100%;
+        }
+
+        .logo_img {
+            width: 100%;
+            content: url("omni_logo2.png");
+        }
+
+        .h_img_2 {
+            content: url("omni2.png");
+        }
+
+        .h_img_3 {
+            content: url("omni3.png");
+        }
+
+        .data_window {
+            display: table;
+            width: 86vw;
+            position: relative;
+            left: 6vw;
+        }
+
+        .data_window_node {
+            display: table-row;
+        }
+
+        .data_window_node_left {
+            display: table-cell;
+        }
+
+        .data_window_node_right {
+            display: table-cell;
+            word-wrap: break-word;
+            vertical-align: top;
+            padding-top: 4vh;
+            padding-bottom: 2vh;
+            padding-left: 1vw;
+        }
+
+        .pdf_image {
+            padding-top: 4vh;
+            width: 3vw;
+            height: 3vw;
+        }
+
+        button {
+            border: 2px solid black;
+            background: #E5E4E2;
+            font-size: 1vw;
+            font-weight: bold;
+            color: black;
+            padding: 2vh 2vw;
+            margin-top: 2vh;
+        }
+
+        .clickable_image {
+            cursor: pointer;
+            width: 5vw;
+            height: 5vw;
+        }
+
+        .img_by_author {
+            content: url("icon_by_author0.png");
+        }
+
+            .img_by_author:hover {
+                content: url("icon_by_author1.png");
+            }
+
+        .img_by_year {
+            content: url("icon_by_year0.png");
+        }
+
+            .img_by_year:hover {
+                content: url("icon_by_year1.png");
+            }
+
+        .img_major {
+            content: url("icon_major0.png");
+        }
+
+            .img_major:hover {
+                content: url("icon_major1.png");
+            }
+
+        .img_link {
+            content: url("link0.png");
+        }
+
+            .img_link:hover {
+                content: url("link1.png");
+            }
+
+        .img_rg {
+            content: url("rg0.png");
+        }
+
+            .img_rg:hover {
+                content: url("rg1.png");
+            }
+
+        .img_about {
+            content: url("icon_omni0.png");
+        }
+
+            .img_about:hover {
+                content: url("icon_omni1.png");
+            }
+
+        .img_di {
+            content: url("icon_di0.png");
+        }
+
+            .img_di:hover {
+                content: url("icon_di1.png");
+            }
+
+        .img_museu {
+            content: url("icon_museu0.png");
+        }
+
+            .img_museu:hover {
+                content: url("icon_museu1.png");
+            }
+
+        .separator {
+            width: 100vw;
+            height: 20vh;
+        }
+
+        #button_hint {
+            font-size: 1.4vw;
+        }
+
+        .menu_strip {
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
+
+        .menu_line {
+            background-color: #655850;
+            width: 100vw;
+            height: 0.4vh;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <div class="introduction">
+      <table style="margin-top: 4vh; width: 100%;">
+        <tr>
+          <td width="12%">
+            
+          </td>
+          <td width="71%">
+            <h1>OmniPaper [test]</h1>
+            <h3 style="margin-left: 2vw; margin-right: 2vw;">
+              The ARACNOLAB internet resource on Opilionological Taxonomic Literature
+            </h3>
+          </td>
+          <td width="17%"></td>
+        </tr>
+      </table>
+      <p style="text-align: right; margin-bottom: 4vh;">
+          by AB Kury (with contributions by others duly credited)<br />
+          <a href="http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/pdfs%20opiliones.htm" target="_blank">
+          OLD version of OmniPaper</a>
+      </p>
+    </div>
+  </div>
+  <div class="menu_line"></div>
+  <table class="menu_strip">
+    <tr>
+      <td width="32%" align="right">
+        <p id="button_hint"></p>
+      </td>
+      <td width="2%"></td>
+      <td width="7%">
+        <img class="clickable_image img_about" id="about" />
+      </td>
+      <td width="7%">
+        <img class="clickable_image img_by_author" id="by_author" />
+      </td>
+      <td width="7%">
+        <img class="clickable_image img_by_year" id="by_year" />
+      </td>
+      <td width="7%">
+        <img class="clickable_image img_major" id="major_authors" />
+      </td>
+      <td width="7%">
+      </td>
+      <td width="7%">
+        <img class="clickable_image img_di" id="di_id" />
+      </td>
+      <td width="7%">
+        <img class="clickable_image img_museu" id="museu_id" />
+      </td>
+      <td width="17%"></td>
+    </tr>
+  </table>
+  <div class="menu_line"></div>
+  <div class="data_window" id="author_window_id"></div>
+  <div class="data_window" id="data_window_id"></div>
+  <div class="separator"></div>
+
+  <!--======================================================================-->
+  <!--=======================        JAVASCRIPT        =====================-->
+  <!--======================================================================-->
+  <script>
+    const LINES_PER_NODE = 23;
+    const LINES_PER_AUTHOR = 20;
+    const INPUT_VERSION = "14";
+    var ready_by_author = false;
+    var ready_by_year = false;
+    var ready_authors = false;
+    var arr_by_author;
+    var arr_by_year;
+    var arr_authors;
+    function load_by_author() {
+      ABOUT.onclick();
+      var allText = this.response.toString();
+      arr_by_author = allText.split("\n");
+      ready_by_author = true;
+    }
+    function load_by_year() {
+      var allText = this.response.toString();
+      arr_by_year = allText.split("\n");
+      ready_by_year = true;
+    }
+    function load_authors() {
+      var allText = this.response.toString();
+      arr_authors = allText.split("\n");
+      ready_authors = true;
+    }
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.addEventListener("load", load_by_author, false);
+    xmlhttp.open("GET", "output_by_author" + INPUT_VERSION + ".txt", true);
+    xmlhttp.send();
+    var xmlhttp2 = new XMLHttpRequest();
+    xmlhttp2.addEventListener("load", load_by_year, false);
+    xmlhttp2.open("GET", "output_by_year" + INPUT_VERSION + ".txt", true);
+    xmlhttp2.send();
+    var xmlhttp3 = new XMLHttpRequest();
+    xmlhttp3.addEventListener("load", load_authors, false);
+    xmlhttp3.open("GET", "output_authors" + INPUT_VERSION + ".txt", true);
+    xmlhttp3.send();
+
+    var AW = document.getElementById("author_window_id"); // GET REFERENCES BY ID
+    var DW = document.getElementById("data_window_id");
+    var BA = document.getElementById("by_author");
+    var BY = document.getElementById("by_year");
+    var MA = document.getElementById("major_authors");
+    var HINT = document.getElementById("button_hint");
+    var ABOUT = document.getElementById("about");
+    var DI = document.getElementById("di_id");
+    var MUSEU = document.getElementById("museu_id");
+
+    var CONSTRAIN_BY = 0;
+
+    function Clear_Window(wx) {
+      while (wx.firstChild)
+        wx.removeChild(wx.firstChild);
+    }
+
+    function Print_All(src_arr, constrain) { // LIST PAPERS
+      Clear_Window(DW);
+      var subarr;
+      if (constrain) subarr = arr_authors[CONSTRAIN_BY].split(" ");
+      var n = -1 + src_arr.length / LINES_PER_NODE;
+      var k = 0;
+      for (i = 0; i < n; i++) {
+        if (constrain && k > subarr.length - 1) break;
+        if (constrain && i != parseInt(subarr[k])) continue;
+        k++;
+        var node = document.createElement("p");
+        for (j = 1; j < 22; j++) {
+          var idx = i * LINES_PER_NODE + j;
+          if (j == 5 || j == 11) {
+            var txt = document.createElement("em");
+            txt.append(src_arr[idx]);
+            node.appendChild(txt);
+          }
+          else {
+            node.innerHTML += src_arr[idx];
+          }
+        }
+        var div_table = document.createElement("div");
+        div_table.className = "data_window_node";
+        var div_l = document.createElement("div");
+        div_l.className = "data_window_node_left";
+        var idx = i * LINES_PER_NODE + 22;
+        var a = document.createElement("a");
+        a.inputMode = "image";
+        if (src_arr[idx].length > 3) a.innerHTML = "<input class=\"pdf_image\" type=\"image\" src=\"pdf_av.png\"/>";
+        else a.innerHTML = "<input class=\"pdf_image\" type=\"image\" src=\"pdf_unav.png\"/>";
+        a.href = src_arr[idx];
+        div_l.appendChild(a);
+        var div_r = document.createElement("div");
+        div_r.className = "data_window_node_right";
+        div_r.appendChild(node);
+        div_table.appendChild(div_l);
+        div_table.appendChild(div_r);
+        document.getElementById("data_window_id").appendChild(div_table);
+      }
+    }
+
+    function Display_Author(idx_str) { // AUTHOR TABLE
+      var idx = parseInt(idx_str);
+      Clear_Window(AW);
+
+      var new_table = document.createElement("table");
+      new_table.width = "100vw";
+      new_table.style = "margin-top: 3vh;";
+
+      var header_row = document.createElement("tr"); // HEADER
+      header_row.width = "100%";
+      header_row.height = "55%";
+      var header_cell = document.createElement("td"); // TITLE
+      header_cell.width = "70%";
+      header_cell.colSpan = "4";
+      header_cell_h2 = document.createElement("h2");
+      var str_birth, str_death;
+      if (arr_authors[idx + 6].length > 3) 
+        str_birth = arr_authors[idx + 6].substr(arr_authors[idx + 6].length - 5);
+      if (arr_authors[idx + 8].length > 3) 
+        str_death = arr_authors[idx + 8].substr(arr_authors[idx + 8].length - 5, 4);
+      header_cell_h2.innerHTML = arr_authors[idx + 3] + " " + arr_authors[idx] + " (" + str_birth + "-" + str_death + ")";
+      header_cell.appendChild(header_cell_h2);
+      var img_cell = document.createElement("td"); // IMAGE
+      img_cell.width = "20%";
+      img_cell.rowSpan = "4";
+      var img_author = document.createElement("img");
+      if (arr_authors[idx + 14].length > 4)
+        img_author.src = arr_authors[idx + 14];
+      else img_author.src = "noface.jpg";
+      img_author.style = "display: block; width: 100%; height: auto;";
+      img_cell.appendChild(img_author);
+      var blank_cell2 = document.createElement("td");
+      blank_cell2.rowSpan = "4";
+      blank_cell2.width = "10%";
+      header_row.appendChild(header_cell);
+      header_row.appendChild(img_cell);
+      header_row.appendChild(blank_cell2);
+
+      var birth_row = document.createElement("tr"); // BIRTH
+      birth_row.height = "15%";
+      birth_row.style = "font-size: 1.5vw;";
+      var birth_place;
+      if (arr_authors[idx + 7].length > 3) birth_place = ", " + arr_authors[idx + 7];
+      birth_row.innerHTML = "<td width=\"10%\">Birth</td><td colSpan = \"3\">" + arr_authors[idx + 6] + birth_place + "</td>";
+
+      var death_row = document.createElement("tr"); // DEATH
+      death_row.height = "15%";
+      death_row.style = "font-size: 1.5vw;";
+      var death_place;
+      if (arr_authors[idx + 9].length > 3) death_place = ", " + arr_authors[idx + 9];
+      death_row.innerHTML = "<td>Death</td><td colSpan = \"3\">" + arr_authors[idx + 8] + death_place + "</td>";
+
+      var link_row = document.createElement("tr"); // LINKS
+      link_row.height = "15%";
+      link_row.style = "font-size: 1.5vw; object-align: top;";
+      var link_cell1 = document.createElement("td");
+      link_cell1.innerHTML = "Links";
+      var link_cell2 = document.createElement("td");
+      var link_cell3 = document.createElement("td");
+      link_cell2.style = "object-align:left";
+      link_cell2.width = "0%";
+      link_cell3.style = "object-align:left";
+      link_cell3.width = "0%";
+      link_row.appendChild(link_cell1);
+      if (arr_authors[idx + 12].length > 3) { // RESEARCH GATE
+        link_cell2.width = "10%";
+        var rg_img = document.createElement("img");
+        rg_img.className = "clickable_image img_rg";
+        rg_img.name = arr_authors[idx + 12];
+        rg_img.onclick = function (event) {
+          window.open(this.name);
+        }
+        link_cell2.appendChild(rg_img);
+        link_row.appendChild(link_cell2);
+      }
+      if (arr_authors[idx + 13].length > 3) { // EXTERNAL LINK
+        link_cell3.width = "10%";
+        var link_img = document.createElement("img");
+        link_img.className = "clickable_image img_link";
+        link_img.name = arr_authors[idx + 13];
+        link_img.onclick = function (event) {
+          window.open(this.name);
+        }
+        link_cell3.appendChild(link_img);
+        link_row.appendChild(link_cell3);
+      }
+      var blank_cell = document.createElement("td");
+      link_row.appendChild(blank_cell);
+
+      var bio = document.createElement("p"); // BIOGRAPHY
+      bio.style = "font-size: 1.2vw; text-align: justify; margin-top: 4vh; width: 89%;";
+      bio.innerHTML = arr_authors[idx + 10];
+      
+      new_table.appendChild(header_row);
+      new_table.appendChild(birth_row);
+      new_table.appendChild(death_row);
+      new_table.appendChild(link_row);
+      AW.appendChild(new_table);
+      AW.appendChild(bio);
+
+      CONSTRAIN_BY = idx + 2;
+      if (ready_by_year)
+        Print_All(arr_by_year, true);
+    }
+
+    MA.onclick = function (event) { // LIST MAJOR AUTHORS
+      Clear_Window(AW);
+      Clear_Window(DW);
+      if (ready_authors) {
+        var new_table = document.createElement("table");
+        new_table.cellSpacing = "8";
+        new_table.style = "margin-top: 3vh;";
+        var n_authors = arr_authors.length / LINES_PER_AUTHOR;
+        var n_rows = Math.floor(n_authors / 8) + 1;
+        for (i = 0; i < n_rows; i++) {
+          var new_row = document.createElement("tr");
+          for (j = 0; j < 8; j++) {
+            var idx = (i * 8 + j) * 20;
+            if (idx < arr_authors.length - 1) {
+              var new_cell = document.createElement("td");
+              var new_link = document.createElement("a");
+              new_link.innerHTML = arr_authors[idx] + " " + arr_authors[idx + 1];
+              new_link.name = idx;
+              new_link.style = "cursor: pointer; text-decoration: underline;";
+              new_link.onclick = function (event) {
+                Display_Author(this.name);
+              }
+              new_cell.appendChild(new_link);
+              new_row.appendChild(new_cell);
+            }
+          }
+          if (i < n_rows - 1) {
+            var blank_cell = document.createElement("td");
+            blank_cell.width = "18%";
+            new_row.appendChild(blank_cell);
+          }
+          new_table.appendChild(new_row);
+        }
+        document.getElementById("data_window_id").appendChild(new_table);
+      }
+    }
+
+    BA.onclick = function (event) {
+      Clear_Window(AW);
+      if (ready_by_author)
+        Print_All(arr_by_author, false);
+    }
+
+    BY.onclick = function (event) {
+      Clear_Window(AW);
+      if (ready_by_year)
+        Print_All(arr_by_year, false);
+    }
+
+    ABOUT.onclick = function (event) {
+      Clear_Window(AW);
+      Clear_Window(DW);
+      var para1 = document.createElement("p");
+      para1.className = "intro_text";
+      para1.style = "margin-top: 4vh;";
+      para1.innerHTML = "Taxonomic papers are the basic building blocks";
+      para1.innerHTML += " for the knowledge of a group of organisms.";
+      var para2 = document.createElement("p");
+      para2.className = "intro_text";
+      para2.innerHTML = "One of the major hindrances for students starting";
+      para2.innerHTML += " to research taxonomy of a group is literature.";
+      para2.innerHTML += " Needed information may be scattered among hundreds of";
+      para2.innerHTML += " papers issued by the most varied publishers worldwide.";
+      var para3 = document.createElement("p");
+      para3.className = "intro_text";
+      para3.innerHTML = "OmniPaper aims to work as THE bibliographical resource";
+      para3.innerHTML += " for systematics of Opiliones on the Internet by preparing";
+      para3.innerHTML += " PDF files of taxonomic papers on Opiliones and distributing";
+      para3.innerHTML += " them freely to everyone, thus propelling the study of these arachnids.";
+
+      var para4 = document.createElement("p");
+      para4.className = "intro_text";
+      para4.innerHTML = "You may cite this page as:";
+
+      var para5 = document.createElement("p");
+      para5.innerHTML = "Kury, A.B. (2003 onwards) OmniPaper Project ";
+      para5.innerHTML += "— The ARACNOLAB internet resource on Opilionological Taxonomic ";
+      para5.innerHTML += "Literature. Museu Nacional / UFRJ website. Online at: ";
+      para5.innerHTML += "http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/pdfs%20opiliones.htm";
+
+      DW.appendChild(para1);
+      DW.appendChild(para2);
+      DW.appendChild(para3);
+      DW.appendChild(para4);
+      DW.appendChild(para5);
+    }
+
+    DI.onclick = function (event) {
+      window.open("http://www.museunacional.ufrj.br/invertebrados_dp/");
+    }
+
+    MUSEU.onclick = function (event) {
+      window.open("http://www.museunacional.ufrj.br/");
+    }
+
+    BA.onmouseenter = function (event) {
+      HINT.innerHTML = "Papers - sorted by author";
+    }
+
+    BA.onmouseleave = function (event) {
+      HINT.innerHTML = "";
+    }
+
+    BY.onmouseenter = function (event) {
+      HINT.innerHTML = "Papers - sorted by year";
+    }
+
+    BY.onmouseleave = function (event) {
+      HINT.innerHTML = "";
+    }
+
+    MA.onmouseenter = function (event) {
+      HINT.innerHTML = "Major authors";
+    }
+
+    MA.onmouseleave = function (event) {
+      HINT.innerHTML = "";
+    }
+
+    ABOUT.onmouseenter = function (event) {
+      HINT.innerHTML = "About OmniPaper";
+    }
+
+    ABOUT.onmouseleave = function (event) {
+      HINT.innerHTML = "";
+    }
+
+    DI.onmouseenter = function (event) {
+      HINT.innerHTML = "Departamento de Invertebrados";
+    }
+
+    DI.onmouseleave = function (event) {
+      HINT.innerHTML = "";
+    }
+
+    MUSEU.onmouseenter = function (event) {
+      HINT.innerHTML = "Museu Nacional";
+    }
+
+    MUSEU.onmouseleave = function (event) {
+      HINT.innerHTML = "";
+    }
+  </script>
+  <!--
+  0 type
+  1 authors
+  2 year
+  3 chapter_title
+  4 book_editor
+  5 book_title (ITALIC)
+  6 edition_volume
+  7 publisher
+  8 city
+  9 book_page_range
+  10 article_title
+  11 journal_name (ITALIC)
+  12 journal_series
+  13 journal_volume
+  14 journal_issue
+  15 journal_page_range
+  16 chapter_page_range
+  17 day
+  18 month
+  19 nominal_year
+  20 remark
+  21 credits
+  22 URL
+
+  #5f7b93
+  #67787b
+  #eaa925
+  #343c3e
+  #655850
+  -->
+</body>
+</html>
